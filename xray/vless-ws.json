@@ -1,0 +1,25 @@
+{
+  "inbounds": [
+    {
+      "tag": "vless-ws",
+      "port": 3000,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "12396266-3a1f-43f7-8efb-e2478d4950e7",
+            "flow": ""
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ws"
+        }
+      }
+    }
+  ]
+}
