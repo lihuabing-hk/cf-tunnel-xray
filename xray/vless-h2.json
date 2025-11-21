@@ -1,0 +1,24 @@
+{
+  "inbounds": [
+    {
+      "tag": "vless-h2",
+      "port": 3002,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "12396266-3a1f-43f7-8efb-e2478d4950e7"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "h2",
+        "httpSettings": {
+          "path": "/h2"
+        }
+      }
+    }
+  ]
+}
