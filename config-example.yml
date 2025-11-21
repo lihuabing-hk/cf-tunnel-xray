@@ -1,0 +1,31 @@
+# =====================================================
+# Cloudflare Tunnel 配置（WS / VMess / H2）
+# 域名专属版：hb0724.netlib.re
+# =====================================================
+
+tunnel: xray-tunnel
+credentials-file: /root/.cloudflared/xray-tunnel.json
+
+ingress:
+  # -------------------------
+  # ① VLESS/VMess WebSocket
+  # -------------------------
+  - hostname: ws.hb0724.netlib.re
+    service: http://localhost:3000
+
+  # -------------------------
+  # ② VMess WebSocket（单独域名）
+  # -------------------------
+  - hostname: vmess.hb0724.netlib.re
+    service: http://localhost:3001
+
+  # -------------------------
+  # ③ VLESS H2 (HTTP/2)
+  # -------------------------
+  - hostname: h2.hb0724.netlib.re
+    service: http://localhost:3002
+
+  # -------------------------
+  # 默认规则 - 必须放最后
+  # -------------------------
+  - service: http_status:404
