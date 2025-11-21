@@ -1,0 +1,15 @@
+///etc/cloudflared/config.yml
+tunnel: xray-tunnel
+credentials-file: /root/.cloudflared/xray-tunnel.json
+
+ingress:
+  - hostname: ws.hb0724.netlib.re
+    service: http://localhost:3000
+
+  - hostname: vmess.hb0724.netlib.re
+    service: http://localhost:3001
+
+  - hostname: h2.hb0724.netlib.re
+    service: http://localhost:3002
+
+  - service: http_status:404
